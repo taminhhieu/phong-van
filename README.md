@@ -69,36 +69,36 @@ GIT:
   - git checkout <commit-id> để xem hoặc git reset --hard <commit-id> để quay lại.
 
 SQL:
-Câu Hỏi 1: SQL là gì?
+1. SQL là gì?
   - Câu trả lời: SQL (Structured Query Language) là ngôn ngữ tiêu chuẩn được sử dụng để quản lý và thao tác với cơ sở dữ liệu quan hệ. Nó cho phép người dùng thực hiện các thao tác như truy vấn, chèn, cập nhật và xóa dữ liệu, cũng như tạo và quản lý cấu trúc của cơ sở dữ liệu.
 
-Câu Hỏi 2: Sự khác biệt giữa INNER JOIN, LEFT JOIN và RIGHT JOIN là gì?
+2. Sự khác biệt giữa INNER JOIN, LEFT JOIN và RIGHT JOIN là gì?
   - Câu trả lời:
       + INNER JOIN: Chỉ trả về các hàng có giá trị khớp trong cả hai bảng.
       + LEFT JOIN (hoặc LEFT OUTER JOIN): Trả về tất cả các hàng từ bảng bên trái và các hàng khớp từ bảng bên phải. Nếu không có khớp, giá trị từ bảng bên phải sẽ là NULL.
       + RIGHT JOIN (hoặc RIGHT OUTER JOIN): Trả về tất cả các hàng từ bảng bên phải và các hàng khớp từ bảng bên trái. Nếu không có khớp, giá trị từ bảng bên trái sẽ là NULL.
-Câu Hỏi 3: Giải thích khái niệm về khóa chính (Primary Key) và khóa ngoại (Foreign Key)?
+3. Giải thích khái niệm về khóa chính (Primary Key) và khóa ngoại (Foreign Key)?
   - Câu trả lời:
       + Khóa chính (Primary Key): Là một cột hoặc tập hợp các cột trong một bảng mà có giá trị duy nhất cho mỗi hàng. Nó không cho phép giá trị NULL và được sử dụng để xác định duy nhất một bản ghi trong bảng.
       + Khóa ngoại (Foreign Key): Là một cột hoặc tập hợp các cột trong một bảng dùng để tạo mối quan hệ với khóa chính của bảng khác. Khóa ngoại có thể cho phép giá trị NULL và giúp duy trì tính toàn vẹn của dữ liệu giữa các bảng.
-Câu Hỏi 4: Viết câu truy vấn SQL để lấy tất cả các bản ghi từ bảng employees có lương lớn hơn 50000.
+4. Viết câu truy vấn SQL để lấy tất cả các bản ghi từ bảng employees có lương lớn hơn 50000.
   - Câu trả lời:
     + SELECT * FROM employees WHERE salary > 50000;
-Câu Hỏi 5: Làm thế nào để thêm một bản ghi mới vào bảng?
+5. Làm thế nào để thêm một bản ghi mới vào bảng?
     - Câu trả lời: Để thêm một bản ghi mới vào bảng, bạn sử dụng câu lệnh INSERT INTO. Ví dụ, để thêm một nhân viên mới vào bảng employees:
       + INSERT INTO employees (name, position, salary) VALUES ('John Doe', 'Developer', 60000);
-Câu Hỏi 6: Giải thích các loại chỉ mục (Index) trong SQL và tại sao chúng quan trọng?
+6. Giải thích các loại chỉ mục (Index) trong SQL và tại sao chúng quan trọng?
     - Câu trả lời: Chỉ mục là một cấu trúc dữ liệu giúp tăng tốc độ truy vấn trên một bảng. Có hai loại chỉ mục chính:
     - Chỉ mục đơn: Chỉ sử dụng cho một cột.
     - Chỉ mục đa cột: Sử dụng cho nhiều cột.
     - Chỉ mục giúp cải thiện hiệu suất tìm kiếm và truy vấn dữ liệu, nhưng cũng có thể làm giảm hiệu suất khi chèn, cập nhật hoặc xóa bản ghi vì cần phải cập nhật chỉ mục tương ứng.
-Câu Hỏi 7: Viết câu truy vấn để cập nhật thông tin lương của một nhân viên có ID = 1.
+7. Viết câu truy vấn để cập nhật thông tin lương của một nhân viên có ID = 1.
     - Câu trả lời:
        + UPDATE employees SET salary = 70000 WHERE id = 1;
-Câu Hỏi 8: Làm thế nào để xóa một bản ghi trong bảng?
+8. Làm thế nào để xóa một bản ghi trong bảng?
     - Câu trả lời: Để xóa một bản ghi, bạn sử dụng câu lệnh DELETE. Ví dụ, để xóa một nhân viên có ID = 1:
       + DELETE FROM employees WHERE id = 1;
-Câu Hỏi 9: Giải thích về GROUP BY và HAVING.
+9. Giải thích về GROUP BY và HAVING.
     - Câu trả lời:
       + GROUP BY: Được sử dụng để nhóm các bản ghi có cùng giá trị trong một hoặc nhiều cột, thường đi kèm với các hàm tổng hợp như COUNT(), SUM(), AVG().
       + HAVING: Được sử dụng để lọc các nhóm được tạo bởi câu lệnh GROUP BY. Nó cho phép áp dụng điều kiện lên các nhóm, tương tự như WHERE, nhưng áp dụng cho các nhóm thay vì các bản ghi riêng lẻ.
