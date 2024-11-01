@@ -61,6 +61,14 @@ Nâng cao php
     + L (Liskov Substitution Principle): Các lớp con phải có thể thay thế lớp cha mà không làm hỏng ứng dụng. Điều này yêu cầu các phương thức trong lớp con phải hoạt động như kỳ vọng.
     + I (Interface Segregation Principle): Nên có nhiều interface nhỏ thay vì một interface lớn. Điều này giúp các lớp không phải thực hiện các phương thức mà chúng không cần thiết.
     + D (Dependency Inversion Principle): Các lớp cấp cao không nên phụ thuộc vào các lớp cấp thấp; cả hai nên phụ thuộc vào abstraction. Tôi áp dụng điều này thông qua Dependency Injection.
+3.Hãy thảo luận về cách mà bạn có thể xây dựng một API RESTful trong PHP. Các tiêu chuẩn nào bạn theo dõi để đảm bảo rằng API của bạn dễ sử dụng và bảo trì?
+    - Câu trả lời: Để xây dựng một API RESTful trong PHP, tôi sẽ bắt đầu bằng cách thiết kế các endpoint để thực hiện các thao tác CRUD (Create, Read, Update, Delete) cho tài nguyên của ứng dụng. Một ví dụ là sử dụng phương thức GET để lấy danh sách người dùng, POST để tạo người dùng mới, PUT để cập nhật thông tin người dùng và DELETE để xóa người dùng.
+    - Các tiêu chuẩn mà tôi sẽ theo dõi bao gồm:
+    + Sử dụng các phương thức HTTP đúng cách: Chọn phương thức phù hợp cho từng loại yêu cầu.
+    + URL rõ ràng và có cấu trúc: Sử dụng danh từ để đại diện cho tài nguyên (ví dụ: /api/users).
+    + Trả về mã trạng thái HTTP thích hợp: Sử dụng mã như 200 OK, 404 Not Found, 500 Internal Server Error để thông báo về tình trạng yêu cầu.
+    + Cung cấp thông tin rõ ràng về lỗi: Đảm bảo thông điệp lỗi là dễ hiểu và có thể giúp người dùng khắc phục vấn đề.
+    + Sử dụng định dạng JSON: Để dễ dàng trao đổi dữ liệu giữa client và server.
 
 GIT:
 1. Sự khác biệt giữa git fetch và git pull là gì?
