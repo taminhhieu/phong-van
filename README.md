@@ -80,7 +80,8 @@ Nâng cao php
   - Câu trả lời: Các nguyên tắc SOLID bao gồm:
     + S (Single Responsibility Principle): Mỗi lớp nên có một lý do duy nhất để thay đổi
       ```php
-            // Ví dụ, một lớp User nên chỉ xử lý các thông tin liên quan đến người dùng, không nên xử lý việc gửi email.
+            // Ví dụ, một lớp User nên chỉ xử lý các thông tin liên quan đến người dùng,
+               không nên xử lý việc gửi email.
             class User {
                 private $name;
                 private $email;
