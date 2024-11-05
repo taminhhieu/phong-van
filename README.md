@@ -24,6 +24,20 @@ PHP
       + Kế Thừa (Inheritance): Là khả năng một lớp con có thể kế thừa thuộc tính và phương thức từ một lớp cha.Kế thừa giúp tái sử dụng mã nguồn và tạo ra một cấu trúc phân cấp.
       + Đóng/Gói (Encapsulation): Là nguyên tắc đóng gói dữ liệu và phương thức liên quan vào một đối tượng, bảo vệ chúng khỏi sự truy cập từ bên ngoài.
       + Đa Hình (Polymorphism): Là khả năng một đối tượng có thể hiểu và thực hiện các phương thức theo nhiều cách khác nhau. Đa hình giúp giảm sự phức tạp và tăng tính linh hoạt của mã nguồn.
+        ### Ví dụ về một lớp trong JavaScript:
+```javascript
+class Animal {
+  // Thuộc tính (properties)
+  constructor(name, type) {
+    this.name = name;
+    this.type = type;
+  }
+
+  // Phương thức (methods)
+  speak() {
+    console.log(`${this.name} is making a noise.`);
+  }
+}
 6. Bạn có thể giải thích sự khác biệt giữa public, protected, và private trong lớp PHP không?
   - Trả lời:
     + public: Truy cập được ở mọi nơi.
