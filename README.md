@@ -78,7 +78,39 @@ Nâng cao php
   - Câu trả lời: "Event Loop" là một mô hình điều phối xử lý bất đồng bộ, cho phép chương trình quản lý nhiều tác vụ đồng thời mà không cần tạo ra nhiều luồng hoặc quy trình.
 2. Giải thích về các nguyên tắc SOLID và cách áp dụng chúng trong phát triển ứng dụng PHP. Bạn đã từng áp dụng những nguyên tắc này chưa?
   - Câu trả lời: Các nguyên tắc SOLID bao gồm:
-    + S (Single Responsibility Principle): Mỗi lớp nên có một lý do duy nhất để thay đổi. Ví dụ, một lớp User nên chỉ xử lý các thông tin liên quan đến người dùng, không nên xử lý việc gửi email.
+    + S (Single Responsibility Principle): Mỗi lớp nên có một lý do duy nhất để thay đổi
+      ```php
+            // Ví dụ, một lớp User nên chỉ xử lý các thông tin liên quan đến người dùng, không nên xử lý việc gửi email.
+            class User {
+              private $name;
+              private $email;
+          
+              public function __construct($name, $email) {
+                  $this->name = $name;
+                  $this->email = $email;
+              }
+          
+              public function getName() {
+                  return $this->name;
+              }
+          
+              public function getEmail() {
+                  return $this->email;
+              }
+          }
+          
+          class EmailService {
+              public function sendEmail($to, $subject, $message) {
+                  // Logic to send email
+                  echo "Email sent to $to with subject '$subject'.";
+              }
+          }
+          
+          // Sử dụng
+          $user = new User("John Doe", "john@example.com");
+          $emailService = new EmailService();
+          $emailService->sendEmail($user->getEmail(), "Welcome", "Hello " . $user->getName());
+        ```
     + O (Open/Closed Principle): Các lớp nên mở cho việc mở rộng nhưng đóng cho việc sửa đổi. Tôi thường sử dụng interface và abstract class để cho phép các lớp con mở rộng chức năng mà không thay đổi lớp cha.
     + L (Liskov Substitution Principle): Các lớp con phải có thể thay thế lớp cha mà không làm hỏng ứng dụng. Điều này yêu cầu các phương thức trong lớp con phải hoạt động như kỳ vọng.
     + I (Interface Segregation Principle): Nên có nhiều interface nhỏ thay vì một interface lớn. Điều này giúp các lớp không phải thực hiện các phương thức mà chúng không cần thiết.
