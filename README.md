@@ -158,10 +158,14 @@ SQL:
       + Khóa ngoại (Foreign Key): Là một cột hoặc tập hợp các cột trong một bảng dùng để tạo mối quan hệ với khóa chính của bảng khác. Khóa ngoại có thể cho phép giá trị NULL và giúp duy trì tính toàn vẹn của dữ liệu giữa các bảng.
 4. Viết câu truy vấn SQL để lấy tất cả các bản ghi từ bảng employees có lương lớn hơn 50000.
   - Câu trả lời:
-    + SELECT * FROM employees WHERE salary > 50000;
+    ```sql
+          SELECT * FROM employees WHERE salary > 50000;
+    ```
 5. Làm thế nào để thêm một bản ghi mới vào bảng?
     - Câu trả lời: Để thêm một bản ghi mới vào bảng, bạn sử dụng câu lệnh INSERT INTO. Ví dụ, để thêm một nhân viên mới vào bảng employees:
-      + INSERT INTO employees (name, position, salary) VALUES ('John Doe', 'Developer', 60000);
+      ```sql
+          INSERT INTO employees (name, position, salary) VALUES ('John Doe', 'Developer', 60000);
+      ```
 6. Giải thích các loại chỉ mục (Index) trong SQL và tại sao chúng quan trọng?
     - Câu trả lời: Chỉ mục là một cấu trúc dữ liệu giúp tăng tốc độ truy vấn trên một bảng. Có hai loại chỉ mục chính:
     - Chỉ mục đơn: Chỉ sử dụng cho một cột.
@@ -169,10 +173,14 @@ SQL:
     - Chỉ mục giúp cải thiện hiệu suất tìm kiếm và truy vấn dữ liệu, nhưng cũng có thể làm giảm hiệu suất khi chèn, cập nhật hoặc xóa bản ghi vì cần phải cập nhật chỉ mục tương ứng.
 7. Viết câu truy vấn để cập nhật thông tin lương của một nhân viên có ID = 1.
     - Câu trả lời:
-       + UPDATE employees SET salary = 70000 WHERE id = 1;
+      ```sql
+          UPDATE employees SET salary = 70000 WHERE id = 1;
+      ```
 8. Làm thế nào để xóa một bản ghi trong bảng?
     - Câu trả lời: Để xóa một bản ghi, bạn sử dụng câu lệnh DELETE. Ví dụ, để xóa một nhân viên có ID = 1:
-      + DELETE FROM employees WHERE id = 1;
+      ```sql
+          DELETE FROM employees WHERE id = 1;
+      ```
 9. Giải thích về GROUP BY và HAVING.
     - Câu trả lời:
       + GROUP BY: Được sử dụng để nhóm các bản ghi có cùng giá trị trong một hoặc nhiều cột, thường đi kèm với các hàm tổng hợp như COUNT(), SUM(), AVG().
