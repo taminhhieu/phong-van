@@ -18,26 +18,34 @@ PHP
   - Trả lời: OOP gồm 4 nguyên lý: Đóng gói (Encapsulation), Kế thừa (Inheritance), Đa hình (Polymorphism), và Trừu tượng (Abstraction).
   - Một số khái niệm quan trọng trong OOP bao gồm:
       + Lớp (Class): Là một mô hình hoặc khuôn mẫu để tạo ra các đối tượng. Lớp định nghĩa các thuộc tính và phương thức mà các đối tượng của nó sẽ có.
+        ```javascript
+          class Animal {
+            // Thuộc tính (properties)
+            constructor(name, type) {
+              this.name = name;
+              this.type = type;
+            }
+          
+            // Phương thức (methods)
+            speak() {
+              console.log(`${this.name} is making a noise.`);
+            }
+          }
+        ```
       + Đối Tượng (Object): Là một thể hiện cụ thể của một lớp. Đối tượng có thể được tạo ra từ lớp và có thể có các thuộc tính và phương thức cụ thể.
+        ```javascript
+            // Tạo đối tượng từ lớp Animal
+            const myPet = new Animal('Buddy', 'Dog');
+            
+            myPet.speak(); // In ra: Buddy is making a noise.
+        ```
       + Thuộc Tính (Property): Là các dữ liệu mà mỗi đối tượng của một lớp có. Thuộc tính thường đặc trưng cho trạng thái của đối tượng.
       + Phương Thức (Method): Là các hành động mà đối tượng của một lớp có thể thực hiện. Phương thức thường đặc trưng cho hành vi của đối tượng.
       + Kế Thừa (Inheritance): Là khả năng một lớp con có thể kế thừa thuộc tính và phương thức từ một lớp cha.Kế thừa giúp tái sử dụng mã nguồn và tạo ra một cấu trúc phân cấp.
       + Đóng/Gói (Encapsulation): Là nguyên tắc đóng gói dữ liệu và phương thức liên quan vào một đối tượng, bảo vệ chúng khỏi sự truy cập từ bên ngoài.
       + Đa Hình (Polymorphism): Là khả năng một đối tượng có thể hiểu và thực hiện các phương thức theo nhiều cách khác nhau. Đa hình giúp giảm sự phức tạp và tăng tính linh hoạt của mã nguồn.
         ### Ví dụ về một lớp trong JavaScript:
-```javascript
-class Animal {
-  // Thuộc tính (properties)
-  constructor(name, type) {
-    this.name = name;
-    this.type = type;
-  }
-
-  // Phương thức (methods)
-  speak() {
-    console.log(`${this.name} is making a noise.`);
-  }
-}
+        
 6. Bạn có thể giải thích sự khác biệt giữa public, protected, và private trong lớp PHP không?
   - Trả lời:
     + public: Truy cập được ở mọi nơi.
