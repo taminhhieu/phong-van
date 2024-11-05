@@ -82,34 +82,34 @@ Nâng cao php
       ```php
             // Ví dụ, một lớp User nên chỉ xử lý các thông tin liên quan đến người dùng, không nên xử lý việc gửi email.
             class User {
-              private $name;
-              private $email;
+                private $name;
+                private $email;
+            
+                public function __construct($name, $email) {
+                    $this->name = $name;
+                    $this->email = $email;
+                }
+            
+                public function getName() {
+                    return $this->name;
+                }
+            
+                public function getEmail() {
+                    return $this->email;
+                }
+            }
           
-              public function __construct($name, $email) {
-                  $this->name = $name;
-                  $this->email = $email;
-              }
+            class EmailService {
+                public function sendEmail($to, $subject, $message) {
+                    // Logic to send email
+                    echo "Email sent to $to with subject '$subject'.";
+                }
+            }
           
-              public function getName() {
-                  return $this->name;
-              }
-          
-              public function getEmail() {
-                  return $this->email;
-              }
-          }
-          
-          class EmailService {
-              public function sendEmail($to, $subject, $message) {
-                  // Logic to send email
-                  echo "Email sent to $to with subject '$subject'.";
-              }
-          }
-          
-          // Sử dụng
-          $user = new User("John Doe", "john@example.com");
-          $emailService = new EmailService();
-          $emailService->sendEmail($user->getEmail(), "Welcome", "Hello " . $user->getName());
+            // Sử dụng
+            $user = new User("John Doe", "john@example.com");
+            $emailService = new EmailService();
+            $emailService->sendEmail($user->getEmail(), "Welcome", "Hello " . $user->getName());
         ```
     + O (Open/Closed Principle): Các lớp nên mở cho việc mở rộng nhưng đóng cho việc sửa đổi. Tôi thường sử dụng interface và abstract class để cho phép các lớp con mở rộng chức năng mà không thay đổi lớp cha.
     + L (Liskov Substitution Principle): Các lớp con phải có thể thay thế lớp cha mà không làm hỏng ứng dụng. Điều này yêu cầu các phương thức trong lớp con phải hoạt động như kỳ vọng.
